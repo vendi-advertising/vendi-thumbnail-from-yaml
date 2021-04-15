@@ -42,16 +42,15 @@ class ThumbnailLoader extends YamlLoaderBaseWithObjectCache
                 fly_add_image_size($name, $width, $height, $crop);
             } elseif (function_exists('add_image_size')) {
                 add_image_size($name, $width, $height, $crop);
-            } else {
-                // TODO
             }
         };
     }
 
-    public function register_all(): void
+    public static function register_all(): void
     {
-        $items = $this->get_thumbnail_sizes();
-        $func = $this->get_thumbnail_function();
+        $obj = new static();
+        $items = $obj->get_thumbnail_sizes();
+        $func = $obj->get_thumbnail_function();
 
         foreach ($items as $item) {
             $func($item->name, $item->width, $item->height, $item->crop);
