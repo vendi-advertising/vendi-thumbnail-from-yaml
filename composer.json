@@ -1,0 +1,8 @@
+{
+  "name": "vendi-advertising/vendi-thumbnail-from-yaml",
+  "description": "Register WordPress thumbnails in YAML",
+  "license": "MIT",
+  "require": {
+    "vendi-advertising/vendi-yaml-loader": "^1.0"
+  }
+}
