@@ -19,7 +19,7 @@
   "autoload": {
     "psr-4": {
       "Vendi\\ThumbnailSizesFromYaml\\": "src/",
-      "Vendi\\ThumbnailSizesFromYaml\\tests": "tests/"
+      "Vendi\\ThumbnailSizesFromYaml\\tests\\": "tests/"
     }
   }
 }
