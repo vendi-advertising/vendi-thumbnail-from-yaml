@@ -2,3 +2,4 @@
 /.idea/
 /phpunit.phar
 /tests/logs/
+/.phpunit.result.cache

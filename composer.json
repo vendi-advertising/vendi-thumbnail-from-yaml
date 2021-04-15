@@ -3,6 +3,23 @@
   "description": "Register WordPress thumbnails in YAML",
   "license": "MIT",
   "require": {
+    "php": "^7.3|8",
     "vendi-advertising/vendi-yaml-loader": "^1.0"
+  },
+  "require-dev": {
+    "ext-json": "*",
+    "phpunit/phpunit": "^7|^8|^9",
+    "sensiolabs/security-checker": "^6",
+    "symfony/var-dumper": "^4|^5",
+    "mikey179/vfsstream": "^1.6"
+  },
+  "config": {
+    "optimize-autoloader": true
+  },
+  "autoload": {
+    "psr-4": {
+      "Vendi\\ThumbnailSizesFromYaml\\": "src/",
+      "Vendi\\ThumbnailSizesFromYaml\\tests": "tests/"
+    }
   }
 }
