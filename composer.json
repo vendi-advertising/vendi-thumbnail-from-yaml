@@ -3,7 +3,7 @@
   "description": "Register WordPress thumbnails in YAML",
   "license": "MIT",
   "require": {
-    "php": "^7.3|8",
+    "php": "^7.3|^8.0",
     "vendi-advertising/vendi-yaml-loader": "^1.0"
   },
   "require-dev": {
