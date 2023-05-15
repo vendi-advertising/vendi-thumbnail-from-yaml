@@ -1,5 +1,8 @@
 # Readme
 
+[![PHP Composer](https://github.com/vendi-advertising/vendi-thumbnail-from-yaml/actions/workflows/php.yml/badge.svg)](https://github.com/vendi-advertising/vendi-thumbnail-from-yaml/actions/workflows/php.yml)
+
+
 Store thumbnail information in YAML so that it is easier to find, read and edit.
 
 ```yaml
