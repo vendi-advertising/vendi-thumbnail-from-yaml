@@ -14,20 +14,19 @@ use PHPUnit\Framework\TestCase;
 class BaseClass extends TestCase
 {
     //This is name of our FS root for testing
-    private $_test_root_name = 'vendi-cpt-loader-test';
+    private string $_test_root_name = 'vendi-cpt-loader-test';
 
     //This is an instance of the Virtual File System
-    private $_root;
+    private ?vfsStreamDirectory $_root = null;
 
     public function get_vfs_root(): vfsStreamDirectory
     {
         if (!$this->_root) {
             $this->_root = vfsStream::setup(
-                $this->get_root_dir_name_no_trailing_slash(),
-                null,
-                []
+                $this->get_root_dir_name_no_trailing_slash()
             );
         }
+
         return $this->_root;
     }
 

@@ -4,40 +4,28 @@ namespace Vendi\ThumbnailSizesFromYaml;
 
 final class ThumbnailSize
 {
-    /**
-     * @var string
-     */
-    public $name;
+    public string $name;
 
-    /**
-     * @var int
-     */
-    public $width;
+    public int $width;
 
-    /**
-     * @var int
-     */
-    public $height;
+    public int $height;
 
-    /**
-     * @var bool|array
-     */
-    public $crop;
+    public array|bool $crop;
 
     /**
      * @var int[]
      */
-    public $multipliers = [];
+    public array $multipliers = [];
 
     /**
      * ThumbnailSize constructor.
      * @param string $name
      * @param int|string $width
      * @param int|string $height
-     * @param array|bool $crop
+     * @param bool|array $crop
      * @param int[] $multipliers
      */
-    public function __construct(string $name, $width, $height, $crop, array $multipliers)
+    public function __construct(string $name, mixed $width, mixed $height, mixed $crop, array $multipliers)
     {
         $this->name = $name;
         $this->width = $this->force_int($width);
@@ -50,13 +38,10 @@ final class ThumbnailSize
         }
     }
 
-    /**
-     * @param $value
-     * @param bool $default
-     * @return array|bool
-     */
-    private function fix_crop($value, bool $default = false)
+    private function fix_crop(mixed $value): bool|array
     {
+        $default = false;
+
         if (is_bool($value)) {
             return $value;
         }
@@ -68,8 +53,10 @@ final class ThumbnailSize
         return $default;
     }
 
-    private function force_int($value, int $default = 0): int
+    private function force_int(mixed $value): int
     {
+        $default = 0;
+
         if (is_int($value)) {
             return $value >= 0 ? $value : $default;
         }

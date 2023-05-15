@@ -3,13 +3,14 @@
   "description": "Register WordPress thumbnails in YAML",
   "license": "MIT",
   "require": {
-    "php": "^7.3|^8.0|^8.1",
-    "vendi-advertising/vendi-yaml-loader": "^1|^2"
+    "php": "8.0.*|8.1.*|8.2.*",
+    "vendi-advertising/vendi-yaml-loader": "^2|^3"
   },
   "require-dev": {
     "ext-json": "*",
     "phpunit/phpunit": "^8|^9",
-    "mikey179/vfsstream": "^1.6"
+    "mikey179/vfsstream": "^1.6",
+    "symfony/filesystem": "^6.2"
   },
   "config": {
     "optimize-autoloader": true
